@@ -1,14 +1,13 @@
 import java.sql.*;
-import java.sql.DriverManager;
 
-public class MyDBS {
+public class MyJDBC {
     public static void main(String[] args) {
         try {
 
             Connection connection = DriverManager.getConnection(
                     "jdbc:mysql://127.0.0.1:3306/login_schema",
                     "root",
-                    "password"
+                    "yearup"
             );
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM USERS");
